@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">MathGenius</string>
     <string name="title">Math Genius</string>
+    <string name="button">Start</string>
+    <string name="title_activity_math_genius_problem_select">MathGeniusProblemSelect</string>
+    <string name="SelectionTitle">Select Type of Math</string>
+    <string name="AdditionBtn">Addition</string>
 </resources>
