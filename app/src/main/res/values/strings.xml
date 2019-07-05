@@ -5,4 +5,5 @@
     <string name="title_activity_math_genius_problem_select">MathGeniusProblemSelect</string>
     <string name="SelectionTitle">Select Type of Math</string>
     <string name="AdditionBtn">Addition</string>
+    <string name="SubtractionBtn">Subtraction</string>
 </resources>
