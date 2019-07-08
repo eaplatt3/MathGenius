@@ -6,4 +6,5 @@
     <string name="SelectionTitle">Select Type of Math</string>
     <string name="AdditionBtn">Addition</string>
     <string name="SubtractionBtn">Subtraction</string>
+    <string name="multiplyBtn">Multiply</string>
 </resources>
