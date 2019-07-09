@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".MathGeniusMathSelection">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
 
     <TextView
         android:id="@+id/spacer"
@@ -20,7 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/SelectionTitle"
-        android:fontFamily="@font/Adventure"
+        android:fontFamily="@font/adventure"
         android:textColor="#000000"
         android:textSize="45sp"
         android:gravity="center"
@@ -41,7 +47,7 @@
         android:id="@+id/addButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/Adventure"
+        android:fontFamily="@font/adventure"
         android:textSize="25sp"
         android:text="@string/AdditionBtn"
         app:layout_constraintTop_toBottomOf="@id/spacer1"/>
@@ -59,7 +65,7 @@
         android:id="@+id/subButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/Adventure"
+        android:fontFamily="@font/adventure"
         android:textSize="25sp"
         android:text="@string/SubtractionBtn"
         app:layout_constraintTop_toBottomOf="@id/spacer2"/>
@@ -77,7 +83,7 @@
         android:id="@+id/multiButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/Adventure"
+        android:fontFamily="@font/adventure"
         android:textSize="25sp"
         android:text="@string/multiplyBtn"
         app:layout_constraintTop_toBottomOf="@id/spacer3"/>
@@ -95,7 +101,7 @@
         android:id="@+id/divideButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/Adventure"
+        android:fontFamily="@font/adventure"
         android:textSize="25sp"
         android:text="@string/divideBtn"
         app:layout_constraintTop_toBottomOf="@id/spacer4"/>
@@ -113,9 +119,18 @@
         android:id="@+id/exitButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/Adventure"
+        android:fontFamily="@font/adventure"
         android:textSize="25sp"
         android:text="@string/exitBtn"
         app:layout_constraintTop_toBottomOf="@id/spacer5"/>
+    <TextView
+        android:id="@+id/spacer6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="75dp"
+        app:layout_constraintTop_toBottomOf="@id/exitButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 
-</android.support.constraint.ConstraintLayout>
+   </LinearLayout>
+    </ScrollView>
