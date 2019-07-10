@@ -9,4 +9,5 @@
     <string name="multiplyBtn">Multiply</string>
     <string name="divideBtn">Divide</string>
     <string name="exitBtn">Exit</string>
+    <string name="solve">Solve the Problem</string>
 </resources>

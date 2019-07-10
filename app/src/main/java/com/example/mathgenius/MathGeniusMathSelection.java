@@ -1,5 +1,6 @@
 package com.example.mathgenius;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -34,7 +35,8 @@ public class MathGeniusMathSelection extends AppCompatActivity {
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent startNewActivity = new Intent(v.getContext(), MathGeniusAddition.class);
+                startActivity(startNewActivity);
             }
         });
 
