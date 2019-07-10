@@ -10,4 +10,8 @@
     <string name="divideBtn">Divide</string>
     <string name="exitBtn">Exit</string>
     <string name="solve">Solve the Problem</string>
+    <string name="solve_the_equation">Solve the Equation</string>
+    <string name="enter_answer">Enter Answer</string>
+    <string name="submit">Submit</string>
+    <string name="return_to_selection">Return to Selection</string>
 </resources>
