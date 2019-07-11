@@ -43,7 +43,8 @@ public class MathGeniusMathSelection extends AppCompatActivity {
         subBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent startNewActivity = new Intent(v.getContext(), MathGeniusSubtraction.class);
+                startActivity(startNewActivity);
             }
         });
 
