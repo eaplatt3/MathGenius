@@ -51,7 +51,8 @@ public class MathGeniusMathSelection extends AppCompatActivity {
         multiBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent startNewActivity = new Intent(v.getContext(), MathGeniusMultiplication.class);
+                startActivity(startNewActivity);
             }
         });
 
