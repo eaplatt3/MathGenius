@@ -59,7 +59,8 @@ public class MathGeniusMathSelection extends AppCompatActivity {
         divideBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent startNewActivity = new Intent(v.getContext(), MathGeniusDivision.class);
+                startActivity(startNewActivity);
             }
         });
 

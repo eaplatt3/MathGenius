@@ -5,20 +5,19 @@ import android.graphics.Color;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-
 import java.util.Random;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MathGeniusAddition extends AppCompatActivity {
-
+public class MathGeniusDivision extends AppCompatActivity {
     @BindView(R.id.submitBtn)
     Button submitBtn;
     @BindView(R.id.returnBtn)
@@ -29,7 +28,6 @@ public class MathGeniusAddition extends AppCompatActivity {
     EditText editText;
 
     TextView problemArea1;
-    TextView problemArea2;
     TextView equalsLine;
     TextView correctDisplay;
     TextView trysDisplay;
@@ -39,6 +37,7 @@ public class MathGeniusAddition extends AppCompatActivity {
     int answer;
     int result;
     int ctn = 3;
+    int tempNum;
     String firstNum;
     String secondNum;
     String num;
@@ -47,59 +46,42 @@ public class MathGeniusAddition extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_math_genius_addition);
+        setContentView(R.layout.activity_math_genius_division);
         ButterKnife.bind(this);
 
         randomNum = new Random();
         problemArea1 = new TextView(this);
-        problemArea2 = new TextView(this);
         equalsLine = new TextView(this);
         correctDisplay = new TextView(this);
         trysDisplay = new TextView(this);
 
 
         problemArea1 = findViewById(R.id.problemArea1);
-        problemArea2 = findViewById(R.id.problemArea2);
         equalsLine = findViewById(R.id.equalsLine);
         correctDisplay = findViewById(R.id.correctDisplay);
         trysDisplay = findViewById(R.id.trysDisplay);
 
         //Assigning Random Numbers From 1 - 100
-        num1 = randomNum.nextInt(100 - 1) + 1;
-        num2 = randomNum.nextInt(100 - 1) + 1;
+        num1 = randomNum.nextInt(20 - 1) + 1;
+        num2 = randomNum.nextInt(20 - 1) + 1;
 
-        answer = num1 + num2;
+        tempNum = num1 * num2;
+
+        answer = tempNum / num1;
 
         firstNum = String.valueOf(num1);
-        secondNum = String.valueOf(num2);
+        secondNum = String.valueOf(tempNum);
 
-        //Sorts Numbers To Display Biggest on Top
-        if(num1 >= num2){
-            problemArea1.setText("\u00A0" + "\u00A0" + firstNum);
-            problemArea2.setText("+" + secondNum);
-            equalsLine.setText("___");
-        }
-
-        if(num2 >= num1){
-            problemArea1.setText("\u00A0" + "\u00A0" + secondNum);
-            problemArea2.setText("+" + firstNum);
-            equalsLine.setText("___");
-        }
+        problemArea1.setText(tempNum + "\t\t" + "÷" + "\t\t" + num1 + "\t\t" + "=");
 
         //Submit Button Function
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 num = editText.getText().toString().trim();
+                result = Integer.parseInt(num);
 
-                try {
-                    result = Integer.parseInt(num);
-                }catch (NumberFormatException e){
-
-                }
-
-
-                startNewActivity = new Intent(v.getContext(), MathGeniusAddition.class);
+                startNewActivity = new Intent(v.getContext(), MathGeniusDivision.class);
 
                 //Checks For Correct Answer
                 if(result == answer && ctn != 0){
@@ -164,11 +146,6 @@ public class MathGeniusAddition extends AppCompatActivity {
                 finish();
             }
         });
-
-
-
-
-
 
     }
 }
