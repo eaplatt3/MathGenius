@@ -6,8 +6,8 @@
     <string name="SelectionTitle">Select Type of Math</string>
     <string name="AdditionBtn">Addition</string>
     <string name="SubtractionBtn">Subtraction</string>
-    <string name="multiplyBtn">Multiply</string>
-    <string name="divideBtn">Divide</string>
+    <string name="multiplyBtn">Multiplication</string>
+    <string name="divideBtn">Division</string>
     <string name="exitBtn">Exit</string>
     <string name="solve">Solve the Problem</string>
     <string name="solve_the_equation">Solve the Equation</string>
