@@ -64,8 +64,9 @@ public class MathGeniusMathSelection extends AppCompatActivity {
         exitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.exit(1);
-
+                Intent startNewActivity = new Intent(v.getContext(), MainActivity.class);
+                startActivity(startNewActivity);
+                finish();
             }
         });
     }
