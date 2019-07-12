@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MathGeniusDivision"></activity>
+        <activity android:name=".MathGeniusAddLevel"></activity>
+        <activity android:name=".MathGeniusDivision" />
         <activity android:name=".MathGeniusMultiplication" />
         <activity android:name=".MathGeniusSubtraction" />
         <activity android:name=".MathGeniusAddition" />
